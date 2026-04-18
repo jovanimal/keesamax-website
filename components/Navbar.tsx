@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -41,14 +42,16 @@ export function Navbar() {
     >
       <div className="container-base">
         <div className="flex items-center justify-between">
-          <Link href="#" className="flex items-center gap-2.5">
-            <span className="relative flex size-9 items-center justify-center overflow-hidden rounded-lg bg-[var(--color-navy-900)] font-display text-base font-extrabold text-white">
-              <span className="pointer-events-none absolute -right-1/2 -top-1/2 size-full rotate-45 bg-[var(--color-accent)] opacity-40" />
-              <span className="relative">K</span>
-            </span>
-            <span className="font-display text-[1.375rem] font-extrabold tracking-tight text-[var(--color-slate-900)]">
-              Keesamax
-            </span>
+          <Link href="#" aria-label="Keesamax — Home" className="flex items-center">
+            <Image
+              src="/images/keesamax-logo.webp"
+              alt="Keesamax"
+              width={512}
+              height={153}
+              priority
+              sizes="160px"
+              className="h-9 w-auto"
+            />
           </Link>
 
           <ul className="hidden items-center gap-10 md:flex">

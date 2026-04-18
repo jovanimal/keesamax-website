@@ -1,52 +1,73 @@
 import { site } from "@/data/site";
-import { jobs } from "@/data/jobs";
 
 interface OrganizationSchema {
   "@context": "https://schema.org";
-  "@type": "Organization";
+  "@type": ["Organization", "ProfessionalService"];
   name: string;
   legalName: string;
   url: string;
+  logo: string;
+  image: string;
   description: string;
   foundingDate: string;
-  address: { "@type": "PostalAddress"; addressCountry: string };
+  areaServed: string[];
+  address: {
+    "@type": "PostalAddress";
+    addressCountry: string;
+  };
   contactPoint: Array<{
     "@type": "ContactPoint";
     telephone: string;
     contactType: string;
     email: string;
     availableLanguage: string[];
+    areaServed: string[];
   }>;
+  sameAs?: string[];
 }
 
-interface JobPostingSchema {
+interface BreadcrumbSchema {
   "@context": "https://schema.org";
-  "@type": "JobPosting";
-  title: string;
-  description: string;
-  datePosted: string;
-  industry: string;
-  hiringOrganization: { "@type": "Organization"; name: string; sameAs: string };
-  jobLocation: {
-    "@type": "Place";
-    address: { "@type": "PostalAddress"; addressLocality: string };
-  };
+  "@type": "BreadcrumbList";
+  itemListElement: Array<{
+    "@type": "ListItem";
+    position: number;
+    name: string;
+    item: string;
+  }>;
 }
 
 export function JsonLd() {
   const org: OrganizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     name: site.name,
     legalName: site.legalName,
     url: site.url,
+    logo: `${site.url}/images/keesamax-logo.webp`,
+    image: `${site.url}/opengraph-image`,
     description: site.description,
     foundingDate: String(site.founded),
-    address: { "@type": "PostalAddress", addressCountry: "MY" },
+    areaServed: [
+      "Malaysia",
+      "Singapore",
+      "Thailand",
+      "Vietnam",
+      "Indonesia",
+      "Philippines",
+      "Hong Kong",
+      "Taiwan",
+      "China",
+      "Germany",
+    ],
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "MY",
+    },
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+60-16-333-5597",
+        telephone: `+${site.whatsapp.number}`,
         contactType: "customer service",
         email: site.email.contact,
         availableLanguage: [
@@ -57,28 +78,36 @@ export function JsonLd() {
           "Hokkien",
           "German",
         ],
+        areaServed: ["MY", "SG", "TH", "VN", "ID", "PH", "HK", "TW", "CN", "DE"],
       },
     ],
   };
 
-  const datePosted = new Date().toISOString().split("T")[0];
-  const jobPostings: JobPostingSchema[] = jobs.map((job) => ({
+  const breadcrumb: BreadcrumbSchema = {
     "@context": "https://schema.org",
-    "@type": "JobPosting",
-    title: job.title,
-    description: `${job.title} role in ${job.industry} (${job.experience}).`,
-    datePosted,
-    industry: job.industry,
-    hiringOrganization: {
-      "@type": "Organization",
-      name: site.legalName,
-      sameAs: site.url,
-    },
-    jobLocation: {
-      "@type": "Place",
-      address: { "@type": "PostalAddress", addressLocality: job.location },
-    },
-  }));
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: site.url },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: `${site.url}#services`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Open Positions",
+        item: `${site.url}#jobs`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Contact",
+        item: `${site.url}#contact`,
+      },
+    ],
+  };
 
   return (
     <>
@@ -88,9 +117,7 @@ export function JsonLd() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jobPostings),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
     </>
   );

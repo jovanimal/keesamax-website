@@ -52,13 +52,13 @@ export function Services() {
                 <p className="mb-5 flex-grow text-[0.9375rem] leading-[1.7] text-[var(--color-slate-600)]">
                   {service.description}
                 </p>
-                <a
+                {/* <a
                   href="#contact"
                   className="inline-flex items-center gap-2 text-[0.9375rem] font-semibold text-[var(--color-slate-900)] transition-all duration-[250ms] ease-[var(--ease-brand)] group-hover:gap-3.5 group-hover:text-[var(--color-blue-600)]"
                 >
                   Learn more
                   <ArrowRight className="size-4" />
-                </a>
+                </a> */}
               </div>
             </ScrollReveal>
           ))}

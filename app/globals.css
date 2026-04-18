@@ -65,55 +65,58 @@
 /* ═══════════════════════════════════════════════════════════════
    BASE
    ═══════════════════════════════════════════════════════════════ */
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
 
-body {
-  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--color-slate-700);
-  background: #ffffff;
-  line-height: 1.65;
-  overflow-x: hidden;
-}
+  body {
+    font-family: var(--font-body), -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--color-slate-700);
+    background: #ffffff;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: var(--font-display), -apple-system, BlinkMacSystemFont, sans-serif;
-  color: var(--color-slate-900);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display), -apple-system, BlinkMacSystemFont,
+      sans-serif;
+    color: var(--color-slate-900);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
 
-h1 {
-  font-size: clamp(2.25rem, 4.8vw, 3.75rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
+  h1 {
+    font-size: clamp(2.25rem, 4.8vw, 3.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
 
-h2 {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-}
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+  }
 
-h3 {
-  font-size: clamp(1.15rem, 1.6vw, 1.3rem);
-}
+  h3 {
+    font-size: clamp(1.15rem, 1.6vw, 1.3rem);
+  }
 
-h4 {
-  font-size: 1rem;
-}
+  h4 {
+    font-size: 1rem;
+  }
 
-::selection {
-  background: var(--color-navy-900);
-  color: #ffffff;
+  ::selection {
+    background: var(--color-navy-900);
+    color: #ffffff;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="Keesamax">
+  <rect width="64" height="64" rx="12" fill="#0F2341"/>
+  <path d="M12 18 Q32 6 52 18" stroke="#C85A2E" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <text x="32" y="50" font-family="'Plus Jakarta Sans', 'Jakarta Sans', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" text-anchor="middle" fill="#ffffff" letter-spacing="-1">K</text>
+</svg>

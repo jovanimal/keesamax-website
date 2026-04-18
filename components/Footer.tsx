@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Linkedin, Facebook } from "lucide-react";
 import { site } from "@/data/site";
 
@@ -29,14 +30,15 @@ export function Footer() {
       <div className="container-base">
         <div className="mb-14 grid gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.3fr] lg:gap-14">
           <div>
-            <Link href="#" className="mb-5 flex items-center gap-2.5">
-              <span className="relative flex size-9 items-center justify-center overflow-hidden rounded-lg bg-white font-display text-base font-extrabold text-[var(--color-navy-900)]">
-                <span className="pointer-events-none absolute -right-1/2 -top-1/2 size-full rotate-45 bg-[var(--color-accent)] opacity-40" />
-                <span className="relative">K</span>
-              </span>
-              <span className="font-display text-[1.375rem] font-extrabold tracking-tight text-white">
-                Keesamax
-              </span>
+            <Link href="#" aria-label="Keesamax — Home" className="mb-5 flex items-center">
+              <Image
+                src="/images/keesamax-logo-white.webp"
+                alt="Keesamax"
+                width={512}
+                height={153}
+                sizes="180px"
+                className="h-10 w-auto"
+              />
             </Link>
             <p className="mb-5 max-w-[320px] text-[0.9375rem] leading-[1.7]">
               Boutique recruitment specialists connecting exceptional talent with
