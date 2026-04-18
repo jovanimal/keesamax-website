@@ -40,7 +40,7 @@ export function Footer() {
               />
             </Link>
             <p className="mb-5 max-w-[320px] text-[0.9375rem] leading-[1.7]">
-              A Malaysia-based boutique recruitment firm connecting exceptional
+              A Malaysia-based recruitment firm connecting exceptional
               talent with leading companies across Southeast Asia since{" "}
               {site.founded}.
             </p>
@@ -85,7 +85,7 @@ export function Footer() {
               href={`mailto:${site.email.andrew}`}
               className="mb-3 block text-[0.9375rem] text-white/65 transition-colors hover:text-white"
             >
-              {site.email.contact}
+              {site.email.andrew}
             </a>
             <div className="mb-3 block text-[0.9375rem] text-white/65">
               {site.legalName}
@@ -100,7 +100,7 @@ export function Footer() {
           <span>
             &copy; {new Date().getFullYear()} {site.legalName} All rights reserved.
           </span>
-          <span>Malaysia · Boutique Recruitment Specialists · Since {site.founded}</span>
+          <span>Malaysia · Recruitment Specialists · Since {site.founded}</span>
         </div>
       </div>
     </footer>

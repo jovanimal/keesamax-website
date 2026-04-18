@@ -68,7 +68,7 @@ function jobPosting(job: Job, postedAt: string, validThrough: string): JobPostin
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title: job.title,
-    description: `${job.title} role in ${job.industry}. ${job.experience} experience required. Apply via Keesamax, a Malaysia-based boutique recruitment firm.`,
+    description: `${job.title} role in ${job.industry}. ${job.experience} experience required. Apply via Keesamax, a Malaysia-based recruitment firm.`,
     industry: job.industry,
     employmentType: job.type === "Hybrid" ? "FULL_TIME" : "FULL_TIME",
     datePosted: postedAt,

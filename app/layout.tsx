@@ -39,12 +39,12 @@ export const metadata: Metadata = {
     locale: "en_MY",
     url: site.url,
     siteName: site.name,
-    title: `${site.legalName} | Boutique Recruitment Specialists`,
+    title: `${site.legalName} | Recruitment Specialists`,
     description: site.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.legalName} | Boutique Recruitment Specialists`,
+    title: `${site.legalName} | Recruitment Specialists`,
     description: site.description,
   },
   alternates: {
