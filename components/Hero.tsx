@@ -30,14 +30,6 @@ export function Hero() {
       <div className="container-base relative">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-20">
           <div className="animate-[fadeUp_1s_var(--ease-brand)]">
-            <div className="mb-8 inline-flex items-center gap-2.5 rounded-full border border-[var(--color-slate-200)] bg-white px-4 py-2 text-[0.8125rem] font-medium text-[var(--color-slate-700)] shadow-[var(--shadow-xs)]">
-              <span
-                className="pulse-dot block size-2 rounded-full bg-[var(--color-emerald-600)]"
-                style={{ boxShadow: "0 0 0 3px rgba(5,150,105,0.15)" }}
-              />
-              Boutique Recruitment — Established 2013
-            </div>
-
             <h1 className="mb-6">
               Connecting talent,
               <br />
@@ -78,7 +70,7 @@ export function Hero() {
                   Trusted by 100+ leading companies
                 </strong>
                 <span className="text-[0.8125rem] text-[var(--color-slate-500)]">
-                  Placements across 10 countries in APAC
+                  Placements across 5 countries in APAC
                 </span>
               </div>
             </div>

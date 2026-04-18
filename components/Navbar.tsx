@@ -35,7 +35,7 @@ export function Navbar() {
     <nav
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-[var(--ease-brand)]",
-        scrolled
+        scrolled || mobileOpen
           ? "bg-white/95 py-[14px] shadow-[0_1px_0_rgba(15,23,42,0.06)] backdrop-blur-xl backdrop-saturate-150"
           : "py-5",
       )}
@@ -87,13 +87,13 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — full screen below the nav bar */}
       <div
         className={cn(
-          "fixed inset-x-0 top-[calc(100%+0px)] z-40 origin-top bg-white/98 backdrop-blur-xl transition-all duration-300 md:hidden",
+          "fixed inset-x-0 top-[64px] z-40 h-[calc(100dvh-64px)] origin-top overflow-y-auto bg-white transition-opacity duration-300 md:hidden",
           mobileOpen
-            ? "pointer-events-auto h-screen opacity-100"
-            : "pointer-events-none h-0 opacity-0",
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0",
         )}
       >
         <ul className="container-base flex flex-col gap-1 py-6">

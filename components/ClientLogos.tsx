@@ -1,24 +1,39 @@
+import Image from "next/image";
 import { clients } from "@/data/clients";
 
 export function ClientLogos() {
-  // Render twice for a seamless scroll loop
-  const loop = [...clients, ...clients];
   return (
-    <section className="border-b border-[var(--color-slate-100)] bg-white py-14">
-      <div className="mb-8 text-center text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-[var(--color-slate-500)]">
-        Trusted by leading global brands
-      </div>
-      <div className="logo-mask overflow-hidden">
-        <div className="logo-track flex items-center gap-16">
-          {loop.map((client, i) => (
-            <span
-              key={`${client.name}-${i}`}
-              className="shrink-0 select-none whitespace-nowrap font-display text-base font-bold tracking-[0.02em] text-[var(--color-slate-400)] transition-colors duration-300 hover:text-[var(--color-slate-900)]"
-            >
-              {client.name}
-            </span>
-          ))}
+    <section className="border-b border-[var(--color-slate-100)] bg-white py-20">
+      <div className="container-base">
+        <div className="mx-auto mb-12 max-w-[640px] text-center">
+          <div className="eyebrow">Trusted By Leading Brands</div>
+          <h2 className="mb-4">
+            Partnering with global
+            <br />
+            organisations.
+          </h2>
+          <p className="section-lead mx-auto">
+            We help industry leaders across APAC and EMEA transform careers
+            and build world-class teams.
+          </p>
         </div>
+
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {clients.map((client) => (
+            <li
+              key={client.name}
+              className="group relative flex aspect-[5/2] items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-slate-100)] bg-[var(--color-slate-50)] px-6 py-5 transition-all duration-[250ms] ease-[var(--ease-brand)] hover:-translate-y-0.5 hover:border-[var(--color-slate-200)] hover:bg-white hover:shadow-[var(--shadow-sm)]"
+            >
+              <Image
+                src={client.logo}
+                alt={client.name}
+                fill
+                sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 210px"
+                className="object-contain p-6 opacity-60 grayscale transition-all duration-[250ms] ease-[var(--ease-brand)] group-hover:opacity-100 group-hover:grayscale-0"
+              />
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

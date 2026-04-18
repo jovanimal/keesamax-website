@@ -81,6 +81,12 @@
     overflow-x: hidden;
   }
 
+  /* Offset anchor scrolling so the fixed navbar doesn't cover section tops */
+  section[id],
+  [id="industries"] {
+    scroll-margin-top: 80px;
+  }
+
   h1,
   h2,
   h3,
@@ -174,32 +180,6 @@
   opacity: 0.35;
   z-index: -1;
   border-radius: 2px;
-}
-
-/* Auto-scrolling logo strip */
-@keyframes scroll-logos {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.logo-track {
-  animation: scroll-logos 40s linear infinite;
-  width: max-content;
-}
-
-.logo-mask {
-  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent,
-    black 8%,
-    black 92%,
-    transparent
-  );
 }
 
 /* Hero entrance */
