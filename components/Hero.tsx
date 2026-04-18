@@ -67,10 +67,10 @@ export function Hero() {
               </div>
               <div>
                 <strong className="block text-[0.9375rem] font-bold text-[var(--color-slate-900)]">
-                  Trusted by 40+ leading companies
+                  Trusted by 50+ leading companies
                 </strong>
                 <span className="text-[0.8125rem] text-[var(--color-slate-500)]">
-                  Placements across 5+ countries in APAC
+                  Placements across 10+ countries in APAC
                 </span>
               </div>
             </div>

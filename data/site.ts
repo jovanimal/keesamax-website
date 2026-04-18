@@ -24,7 +24,7 @@ export const site: SiteConfig = {
   registration: "202401002894 (1548744-K)",
   tagline: "Connecting talent, inspiring growth.",
   description:
-    "Boutique recruitment firm specializing in executive headhunting, skilled professional placement, and career coaching across Southeast Asia. Based in Malaysia, serving 5+ countries.",
+    "Boutique recruitment firm specializing in executive headhunting, skilled professional placement, and career coaching across Southeast Asia. Based in Malaysia, serving 10+ countries.",
   url: "https://www.keesamax.com",
   whatsapp: {
     display: "+60 16-333 5597",
