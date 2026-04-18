@@ -40,8 +40,9 @@ export function Footer() {
               />
             </Link>
             <p className="mb-5 max-w-[320px] text-[0.9375rem] leading-[1.7]">
-              Boutique recruitment specialists connecting exceptional talent with
-              leading companies across Southeast Asia since {site.founded}.
+              A Malaysia-based boutique recruitment firm connecting exceptional
+              talent with leading companies across Southeast Asia since{" "}
+              {site.founded}.
             </p>
             <div className="flex gap-2.5">
               <SocialIcon href="#" label="LinkedIn">
@@ -102,7 +103,7 @@ export function Footer() {
           <span>
             &copy; {new Date().getFullYear()} {site.legalName} All rights reserved.
           </span>
-          <span>Boutique Recruitment Specialists — Established {site.founded}</span>
+          <span>Malaysia · Boutique Recruitment Specialists · Since {site.founded}</span>
         </div>
       </div>
     </footer>

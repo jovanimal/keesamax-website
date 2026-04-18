@@ -32,7 +32,7 @@ const methods: Method[] = [
 
 export function Contact() {
   return (
-    <section id="contact" className="section-py bg-white">
+    <section id="contact" className="section-py bg-[var(--color-cream)]">
       <div className="container-base">
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-[72px]">
           <ScrollReveal>
@@ -65,7 +65,7 @@ export function Contact() {
                   </>
                 );
                 const className =
-                  "flex items-center gap-[18px] rounded-[var(--radius-md)] border border-[var(--color-slate-100)] bg-[var(--color-slate-50)] p-5 transition-all duration-200 hover:border-[var(--color-slate-200)] hover:bg-white hover:shadow-[var(--shadow-sm)]";
+                  "flex items-center gap-[18px] rounded-[var(--radius-md)] border border-[var(--color-slate-200)]/70 bg-white p-5 transition-all duration-200 hover:border-[var(--color-slate-300)] hover:shadow-[var(--shadow-sm)]";
                 return m.href ? (
                   <a
                     key={m.title}

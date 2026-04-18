@@ -3,7 +3,7 @@ import { clients } from "@/data/clients";
 
 export function ClientLogos() {
   return (
-    <section className="border-b border-[var(--color-slate-100)] bg-white py-20">
+    <section className="border-b border-[var(--color-slate-200)]/60 bg-[var(--color-cream)] py-20">
       <div className="container-base">
         <div className="mx-auto mb-12 max-w-[640px] text-center">
           <div className="eyebrow">Trusted By Leading Brands</div>
@@ -22,7 +22,7 @@ export function ClientLogos() {
           {clients.map((client) => (
             <li
               key={client.name}
-              className="group relative flex aspect-[5/2] items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-slate-100)] bg-[var(--color-slate-50)] px-6 py-5 transition-all duration-[250ms] ease-[var(--ease-brand)] hover:-translate-y-0.5 hover:border-[var(--color-slate-200)] hover:bg-white hover:shadow-[var(--shadow-sm)]"
+              className="group relative flex aspect-[5/2] items-center justify-center rounded-[var(--radius-md)] border border-[var(--color-slate-200)]/60 bg-white px-6 py-5 transition-all duration-[250ms] ease-[var(--ease-brand)] hover:-translate-y-0.5 hover:border-[var(--color-slate-300)] hover:shadow-[var(--shadow-sm)]"
             >
               <Image
                 src={client.logo}

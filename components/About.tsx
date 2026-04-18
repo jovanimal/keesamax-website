@@ -45,7 +45,7 @@ export function About() {
                 exceptional talent.
               </>
             }
-            lead="From a sole proprietorship to an incorporated firm — our journey reflects our commitment to growth, relationships, and excellence."
+            lead="From a sole proprietorship in Malaysia to an incorporated firm serving APAC, our journey reflects a decade of commitment to growth, relationships, and excellence."
           />
         </ScrollReveal>
 

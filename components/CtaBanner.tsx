@@ -22,7 +22,7 @@ export function CtaBanner() {
               or your next role?
             </h2>
             <p className="max-w-[560px] text-[1.0625rem] leading-[1.6] text-[var(--color-slate-300)]">
-              Let&apos;s have a conversation about what you&apos;re looking for —
+              Let&apos;s have a conversation about what you&apos;re looking for,
               whether you&apos;re hiring or exploring your next move.
             </p>
           </div>

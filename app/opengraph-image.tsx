@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { site } from "@/data/site";
 
 export const runtime = "edge";
-export const alt = `${site.legalName} — Boutique Recruitment Specialists`;
+export const alt = `${site.legalName} · Boutique Recruitment Specialists`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -92,8 +92,8 @@ export default function OpengraphImage(): ImageResponse {
               maxWidth: 900,
             }}
           >
-            Boutique recruitment across Southeast Asia — executive
-            headhunting, skilled placement, and career coaching since 2013.
+            Malaysia-based boutique recruitment across Southeast Asia.
+            Executive headhunting, skilled placement, and career coaching since 2013.
           </div>
         </div>
 

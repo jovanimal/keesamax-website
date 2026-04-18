@@ -34,7 +34,7 @@ const features: Feature[] = [
 
 export function WhyUs() {
   return (
-    <section id="why-us" className="section-py bg-[var(--color-slate-50)]">
+    <section id="why-us" className="section-py bg-[var(--color-slate-100)]">
       <div className="container-base">
         <div className="grid items-center gap-16 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
           <ScrollReveal>

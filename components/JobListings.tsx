@@ -32,7 +32,7 @@ export function JobListings() {
   const shown = showAll ? visible : visible.slice(0, 8);
 
   return (
-    <section id="jobs" className="section-py bg-[var(--color-slate-50)]">
+    <section id="jobs" className="section-py bg-[var(--color-slate-100)]">
       <div className="container-base">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>

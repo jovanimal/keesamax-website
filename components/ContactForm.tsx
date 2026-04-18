@@ -88,7 +88,7 @@ export function ContactForm() {
     <form
       onSubmit={handleSubmit(onSubmit)}
       noValidate
-      className="rounded-[var(--radius-lg)] border border-[var(--color-slate-100)] bg-[var(--color-slate-50)] p-7 md:p-10"
+      className="rounded-[var(--radius-lg)] border border-[var(--color-slate-200)]/70 bg-white p-7 shadow-[var(--shadow-sm)] md:p-10"
     >
       <div className="grid gap-3.5 sm:grid-cols-2">
         <Field label="Full Name *" error={errors.fullName?.message}>

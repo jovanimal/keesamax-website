@@ -37,8 +37,8 @@ export function Hero() {
             </h1>
 
             <p className="mb-9 max-w-[520px] text-[1.125rem] leading-[1.7] text-[var(--color-slate-600)]">
-              A boutique recruitment firm helping companies across Southeast Asia
-              find exceptional talent — from skilled professionals to C-suite
+              Based in Malaysia, we help companies across Southeast Asia find
+              exceptional talent, from skilled professionals to C-suite
               executives. Relationship-driven. Multilingual. Proven.
             </p>
 
@@ -67,10 +67,10 @@ export function Hero() {
               </div>
               <div>
                 <strong className="block text-[0.9375rem] font-bold text-[var(--color-slate-900)]">
-                  Trusted by 100+ leading companies
+                  Trusted by 40+ leading companies
                 </strong>
                 <span className="text-[0.8125rem] text-[var(--color-slate-500)]">
-                  Placements across 5 countries in APAC
+                  Placements across 5+ countries in APAC
                 </span>
               </div>
             </div>
@@ -97,7 +97,7 @@ export function Hero() {
               icon={<Star className="size-5 text-[var(--color-blue-500)]" />}
               iconBg="bg-[var(--color-blue-50)]"
               label="Success Rate"
-              value="98% Placement"
+              value="92% Placement"
             />
             <FloatCard
               className="bottom-10 left-0 lg:-left-8"

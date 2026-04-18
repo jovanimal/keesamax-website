@@ -20,7 +20,7 @@ export const services: Service[] = [
     number: "02",
     title: "Executive Headhunting",
     description:
-      "Our targeted approach identifies and attracts top-tier talent who may not be actively seeking new roles — giving you access to the best from specifically targeted companies.",
+      "Our targeted approach identifies and attracts top-tier talent who may not be actively seeking new roles, giving you access to the best from specifically targeted companies.",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop",
     alt: "Executive interview in modern office",
@@ -29,7 +29,7 @@ export const services: Service[] = [
     number: "03",
     title: "Career Coaching",
     description:
-      "Supporting individuals through career and outplacement coaching — from personalized one-on-one sessions to group workshops, empowering professionals on their next career journey.",
+      "Supporting individuals through career and outplacement coaching, from personalized one-on-one sessions to group workshops, empowering professionals on their next career journey.",
     image:
       "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop",
     alt: "Career coaching session",
