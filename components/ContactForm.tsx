@@ -91,10 +91,13 @@ export function ContactForm() {
       className="rounded-[var(--radius-lg)] border border-[var(--color-slate-200)]/70 bg-white p-7 shadow-[var(--shadow-sm)] md:p-10"
     >
       <div className="grid gap-3.5 sm:grid-cols-2">
-        <Field label="Full Name *" error={errors.fullName?.message}>
+        <Field htmlFor="contact-fullName" label="Full Name *" error={errors.fullName?.message}>
           <input
+            id="contact-fullName"
             type="text"
+            autoComplete="name"
             placeholder="Your full name"
+            aria-invalid={errors.fullName ? "true" : "false"}
             className={cn(
               inputBase,
               errors.fullName
@@ -104,10 +107,13 @@ export function ContactForm() {
             {...register("fullName")}
           />
         </Field>
-        <Field label="Email *" error={errors.email?.message}>
+        <Field htmlFor="contact-email" label="Email *" error={errors.email?.message}>
           <input
+            id="contact-email"
             type="email"
+            autoComplete="email"
             placeholder="you@company.com"
+            aria-invalid={errors.email ? "true" : "false"}
             className={cn(
               inputBase,
               errors.email
@@ -119,19 +125,23 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field label="Phone Number" error={errors.phone?.message}>
+      <Field htmlFor="contact-phone" label="Phone Number" error={errors.phone?.message}>
         <input
+          id="contact-phone"
           type="tel"
+          autoComplete="tel"
           placeholder="+60 12-345 6789"
           className={cn(inputBase, "border-[var(--color-slate-200)] focus:border-[var(--color-navy-900)]")}
           {...register("phone")}
         />
       </Field>
 
-      <Field label="Message *" error={errors.message?.message}>
+      <Field htmlFor="contact-message" label="Message *" error={errors.message?.message}>
         <textarea
+          id="contact-message"
           rows={5}
           placeholder="Tell us about your hiring needs or career goals..."
+          aria-invalid={errors.message ? "true" : "false"}
           className={cn(
             inputBase,
             "min-h-[120px] resize-y",
@@ -143,8 +153,9 @@ export function ContactForm() {
         />
       </Field>
 
-      <Field label="Upload CV (optional, PDF/DOC, max 5MB)" error={errors.cv?.message}>
+      <Field htmlFor="contact-cv" label="Upload CV (optional, PDF/DOC, max 5MB)" error={errors.cv?.message}>
         <input
+          id="contact-cv"
           type="file"
           accept=".pdf,.doc,.docx"
           className={cn(
@@ -182,15 +193,19 @@ export function ContactForm() {
 }
 
 interface FieldProps {
+  htmlFor: string;
   label: string;
   error?: string;
   children: React.ReactNode;
 }
 
-function Field({ label, error, children }: FieldProps) {
+function Field({ htmlFor, label, error, children }: FieldProps) {
   return (
     <div className="mb-5">
-      <label className="mb-2 block text-[0.8125rem] font-semibold text-[var(--color-slate-700)]">
+      <label
+        htmlFor={htmlFor}
+        className="mb-2 block text-[0.8125rem] font-semibold text-[var(--color-slate-700)]"
+      >
         {label}
       </label>
       {children}

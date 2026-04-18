@@ -1,4 +1,5 @@
 import { site } from "@/data/site";
+import { jobs, type Job } from "@/data/jobs";
 
 interface OrganizationSchema {
   "@context": "https://schema.org";
@@ -35,6 +36,58 @@ interface BreadcrumbSchema {
     name: string;
     item: string;
   }>;
+}
+
+interface JobPostingSchema {
+  "@context": "https://schema.org";
+  "@type": "JobPosting";
+  title: string;
+  description: string;
+  industry: string;
+  employmentType: string;
+  datePosted: string;
+  validThrough: string;
+  hiringOrganization: {
+    "@type": "Organization";
+    name: string;
+    sameAs: string;
+  };
+  jobLocation: {
+    "@type": "Place";
+    address: {
+      "@type": "PostalAddress";
+      addressLocality: string;
+      addressCountry: string;
+    };
+  };
+  directApply: boolean;
+}
+
+function jobPosting(job: Job, postedAt: string, validThrough: string): JobPostingSchema {
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: `${job.title} role in ${job.industry}. ${job.experience} experience required. Apply via Keesamax, a Malaysia-based boutique recruitment firm.`,
+    industry: job.industry,
+    employmentType: job.type === "Hybrid" ? "FULL_TIME" : "FULL_TIME",
+    datePosted: postedAt,
+    validThrough,
+    hiringOrganization: {
+      "@type": "Organization",
+      name: site.name,
+      sameAs: site.url,
+    },
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: job.location,
+        addressCountry: job.location.toLowerCase().includes("singapore") ? "SG" : "MY",
+      },
+    },
+    directApply: false,
+  };
 }
 
 export function JsonLd() {
@@ -109,6 +162,12 @@ export function JsonLd() {
     ],
   };
 
+  const now = new Date();
+  const postedAt = now.toISOString().slice(0, 10);
+  const validThrough = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000)
+    .toISOString()
+    .slice(0, 10);
+
   return (
     <>
       <script
@@ -119,6 +178,15 @@ export function JsonLd() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
+      {jobs.map((job) => (
+        <script
+          key={job.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jobPosting(job, postedAt, validThrough)),
+          }}
+        />
+      ))}
     </>
   );
 }

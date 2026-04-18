@@ -20,8 +20,8 @@ const methods: Method[] = [
   {
     icon: <Mail className="size-5" />,
     title: "Email",
-    value: site.email.contact,
-    href: `mailto:${site.email.contact}`,
+    value: site.email.andrew,
+    href: `mailto:${site.email.andrew}`,
   },
   {
     icon: <Building2 className="size-5" />,

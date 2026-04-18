@@ -42,7 +42,7 @@ export function Navbar() {
     >
       <div className="container-base">
         <div className="flex items-center justify-between">
-          <Link href="#" aria-label="Keesamax — Home" className="flex items-center">
+          <Link href="/" aria-label="Keesamax · Home" className="flex items-center">
             <Image
               src="/images/keesamax-logo.webp"
               alt="Keesamax"
