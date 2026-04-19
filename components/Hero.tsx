@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Briefcase, Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { jobs } from "@/data/jobs";
+import type { Job } from "@/lib/jobs";
 
 const trustAvatars: string[] = [
   "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=faces",
@@ -10,7 +10,11 @@ const trustAvatars: string[] = [
   "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=faces",
 ];
 
-export function Hero() {
+interface HeroProps {
+  jobs: Job[];
+}
+
+export function Hero({ jobs }: HeroProps) {
   const openRoles = jobs.length;
 
   return (

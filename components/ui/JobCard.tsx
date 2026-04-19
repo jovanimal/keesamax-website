@@ -1,5 +1,5 @@
 import { ArrowRight, MapPin, Clock } from "lucide-react";
-import type { Job } from "@/data/jobs";
+import type { Job } from "@/lib/jobs";
 
 interface JobCardProps {
   job: Job;

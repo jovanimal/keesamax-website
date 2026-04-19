@@ -1,5 +1,5 @@
 import { site } from "@/data/site";
-import { jobs, type Job } from "@/data/jobs";
+import type { Job } from "@/lib/jobs";
 
 interface OrganizationSchema {
   "@context": "https://schema.org";
@@ -90,7 +90,11 @@ function jobPosting(job: Job, postedAt: string, validThrough: string): JobPostin
   };
 }
 
-export function JsonLd() {
+interface JsonLdProps {
+  jobs: Job[];
+}
+
+export function JsonLd({ jobs }: JsonLdProps) {
   const org: OrganizationSchema = {
     "@context": "https://schema.org",
     "@type": ["Organization", "ProfessionalService"],
