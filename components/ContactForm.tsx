@@ -18,6 +18,7 @@ const schema = z.object({
   email: z.string().email("Please enter a valid email"),
   phone: z.string().optional(),
   message: z.string().min(10, "Please write at least a short message"),
+  website: z.string().optional(),
   cv: z
     .custom<FileList>()
     .optional()
@@ -59,6 +60,7 @@ export function ContactForm() {
       formData.append("email", values.email);
       if (values.phone) formData.append("phone", values.phone);
       formData.append("message", values.message);
+      if (values.website) formData.append("website", values.website);
       if (values.cv && values.cv.length > 0) {
         formData.append("cv", values.cv[0]);
       }
@@ -90,6 +92,20 @@ export function ContactForm() {
       noValidate
       className="rounded-[var(--radius-lg)] border border-[var(--color-slate-200)]/70 bg-white p-7 shadow-[var(--shadow-sm)] md:p-10"
     >
+      <div
+        aria-hidden="true"
+        className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden"
+      >
+        <label htmlFor="contact-website">Website</label>
+        <input
+          id="contact-website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("website")}
+        />
+      </div>
+
       <div className="grid gap-3.5 sm:grid-cols-2">
         <Field htmlFor="contact-fullName" label="Full Name *" error={errors.fullName?.message}>
           <input

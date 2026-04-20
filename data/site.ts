@@ -12,7 +12,7 @@ export interface SiteConfig {
   };
   email: {
     contact: string;
-    [key: string]: string; // For individual team member emails (e.g., "andrew", "may-ann")
+    [key: string]: string; // For individual team member emails (e.g., "andrew", "mayann")
   };
   founded: number;
   incorporated: number;
@@ -33,8 +33,8 @@ export const site: SiteConfig = {
   },
   email: {
     contact: "contact@keesamax.com",
-    andrew: "andrew.keesamax.com",
-    mayann: "may-ann.keesamax.com",
+    andrew: "andrew@keesamax.com",
+    mayann: "mayann@keesamax.com",
 },
   founded: 2013,
   incorporated: 2024,

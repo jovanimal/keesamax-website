@@ -35,11 +35,11 @@ public/images/     # Logos + static assets
 _spec/             # Source-of-truth mockup + revamp PDF (reference only)
 ```
 
-All copy, job listings, services, industries, and client logos live in `/data/*.ts` as typed arrays so non-code edits are straightforward (future migration to Notion-backed content is planned).
+Most copy (services, industries, clients, site config) lives in `/data/*.ts` as typed arrays so non-code edits are straightforward. Job listings are sourced from Notion at build/request time via `lib/jobs.ts`.
 
 ## Content editing
 
-- **Jobs:** `data/jobs.ts` — `Job` interface, category enum
+- **Jobs:** Notion database (see `NOTION_JOBS_DATABASE_ID`) — fetched by `lib/jobs.ts`
 - **Services:** `data/services.ts`
 - **Industries / Countries:** `data/industries.ts`
 - **Clients:** `data/clients.ts`
