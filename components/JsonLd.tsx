@@ -126,7 +126,7 @@ export function JsonLd({ jobs }: JsonLdProps) {
         "@type": "ContactPoint",
         telephone: `+${site.whatsapp.number}`,
         contactType: "customer service",
-        email: site.email.contact,
+        email: site.email.andrew,
         availableLanguage: [
           "English",
           "Malay",

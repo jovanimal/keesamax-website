@@ -172,7 +172,7 @@ function buildAutoReplyHtml({ fullName, message }: AutoReplyInput): string {
   const waUrl = site.whatsapp.url;
   const siteUrl = site.url;
   const siteHost = siteUrl.replace(/^https?:\/\//, "").replace(/\/$/, "");
-  const contactEmail = escapeHtml(site.email.contact);
+  const contactEmail = escapeHtml(site.email.andrew);
 
   return `<!DOCTYPE html>
 <html lang="en">
