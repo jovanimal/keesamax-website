@@ -12,18 +12,6 @@ interface Method {
 
 const methods: Method[] = [
   {
-    icon: <Phone className="size-5" />,
-    title: "WhatsApp / Phone",
-    value: site.whatsapp.display,
-    href: site.whatsapp.url,
-  },
-  {
-    icon: <Mail className="size-5" />,
-    title: "Email",
-    value: site.email.andrew,
-    href: `mailto:${site.email.andrew}`,
-  },
-  {
     icon: <Building2 className="size-5" />,
     title: "Company",
     value: `${site.legalName} [${site.registration}]`,
@@ -83,16 +71,6 @@ export function Contact() {
                 );
               })}
             </div>
-
-            <a
-              href={site.whatsapp.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-[var(--radius-sm)] bg-[#25D366] px-[26px] py-3.5 text-[0.9375rem] font-semibold text-white transition-all duration-[250ms] hover:-translate-y-px hover:bg-[#1DA851] hover:shadow-[0_6px_20px_rgba(37,211,102,0.3)]"
-            >
-              <WhatsAppGlyph className="size-[18px]" />
-              Chat on WhatsApp
-            </a>
           </ScrollReveal>
 
           <ScrollReveal delay={2}>

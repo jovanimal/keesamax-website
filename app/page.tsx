@@ -23,7 +23,7 @@ export default async function Home() {
       <Navbar />
       <main>
         <Hero jobs={jobs} />
-        <ClientLogos />
+        {/* <ClientLogos /> */}
         <Services />
         <WhyUs />
         <About />

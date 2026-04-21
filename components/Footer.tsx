@@ -44,14 +44,14 @@ export function Footer() {
               talent with leading companies across Southeast Asia since{" "}
               {site.founded}.
             </p>
-            <div className="flex gap-2.5">
+            {/* <div className="flex gap-2.5">
               <SocialIcon href={site.whatsapp.url} label="WhatsApp">
                 <WhatsAppGlyph />
               </SocialIcon>
               <SocialIcon href={`mailto:${site.email.andrew}`} label="Email">
                 <MailGlyph />
               </SocialIcon>
-            </div>
+            </div> */}
           </div>
 
           {navCols.map((col) => (
@@ -75,7 +75,7 @@ export function Footer() {
             <h4 className="mb-5 font-body text-sm font-bold uppercase tracking-[0.08em] text-white">
               Get in Touch
             </h4>
-            <a
+            {/* <a
               href={site.whatsapp.url}
               className="mb-3 block text-[0.9375rem] text-white/65 transition-colors hover:text-white"
             >
@@ -86,7 +86,7 @@ export function Footer() {
               className="mb-3 block text-[0.9375rem] text-white/65 transition-colors hover:text-white"
             >
               {site.email.andrew}
-            </a>
+            </a> */}
             <div className="mb-3 block text-[0.9375rem] text-white/65">
               {site.legalName}
             </div>
