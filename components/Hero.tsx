@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/Button";
 import type { Job } from "@/lib/jobs";
 
 const trustAvatars: string[] = [
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=faces",
-  "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=faces",
+  "/images/avatar-malay-woman.jpg",
+  "/images/avatar-chinese-man.jpg",
+  "/images/avatar-indian-woman.jpg",
+  "/images/avatar-chinese-woman.jpg",
 ];
 
 interface HeroProps {
@@ -87,8 +87,8 @@ export function Hero({ jobs }: HeroProps) {
             />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-xl)] shadow-[var(--shadow-xl)]">
               <Image
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=1000&fit=crop"
-                alt="Business professionals collaborating in a modern office"
+                src="/images/hero-team.jpg"
+                alt="Diverse Malaysian business professionals collaborating in a modern Kuala Lumpur office"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"

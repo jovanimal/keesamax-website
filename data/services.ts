@@ -12,26 +12,23 @@ export const services: Service[] = [
     title: "Recruitment of Skilled Professionals",
     description:
       "We source and place highly qualified professionals across industries and countries, ensuring the perfect match between candidate expertise and your business needs.",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop",
-    alt: "Recruitment professionals collaborating",
+    image: "/images/service-career-fair.jpg",
+    alt: "Recruiter shaking hands with a candidate at a Malaysian career fair",
   },
   {
     number: "02",
     title: "Executive Headhunting",
     description:
       "Our targeted approach identifies and attracts top-tier talent who may not be actively seeking new roles, giving you access to the best from specifically targeted companies.",
-    image:
-      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop",
-    alt: "Executive interview in modern office",
+    image: "/images/service-lounge-meeting.jpg",
+    alt: "Discreet executive meeting over coffee in an upscale Kuala Lumpur hotel lounge",
   },
   {
     number: "03",
     title: "Career Coaching",
     description:
       "Supporting individuals through career and outplacement coaching, from personalized one-on-one sessions to group workshops, empowering professionals on their next career journey.",
-    image:
-      "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop",
-    alt: "Career coaching session",
+    image: "/images/service-workshop.jpg",
+    alt: "Career coach leading a workshop with a small group of Malaysian professionals",
   },
 ];

@@ -72,8 +72,8 @@ export function WhyUs() {
           <ScrollReveal delay={2} className="relative">
             <div className="relative aspect-[5/4] overflow-hidden rounded-[var(--radius-xl)] shadow-[var(--shadow-xl)]">
               <Image
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=640&fit=crop"
-                alt="Recruitment consultants in conversation"
+                src="/images/whyus-consultant.jpg"
+                alt="Malaysian recruitment consultant meeting with a candidate in a Kuala Lumpur office"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
