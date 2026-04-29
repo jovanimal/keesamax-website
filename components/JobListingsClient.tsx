@@ -2,23 +2,12 @@
 
 import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
-import type { Job, JobCategory } from "@/lib/jobs";
+import { VALID_CATEGORIES, type Job } from "@/lib/jobs";
 import { JobCard } from "@/components/ui/JobCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
-type Filter = "All" | JobCategory;
-
-const CATEGORY_ORDER: JobCategory[] = [
-  "Manufacturing",
-  "FMCG",
-  "Healthcare",
-  "Technology",
-  "Construction",
-  "Logistics",
-  "Finance",
-  "Other",
-];
+type Filter = string;
 
 interface JobListingsClientProps {
   jobs: Job[];
@@ -30,10 +19,14 @@ export function JobListingsClient({ jobs }: JobListingsClientProps) {
   const [showAll, setShowAll] = useState<boolean>(false);
 
   const filters: Filter[] = useMemo(() => {
-    const present = new Set<JobCategory>();
+    const present = new Set<string>();
     for (const job of jobs) present.add(job.category);
-    const ordered = CATEGORY_ORDER.filter((c) => present.has(c));
-    return ["All", ...ordered];
+    const preferred = VALID_CATEGORIES.filter((c) => present.has(c));
+    const preferredSet = new Set<string>(preferred);
+    const extras = Array.from(present)
+      .filter((c) => !preferredSet.has(c))
+      .sort((a, b) => a.localeCompare(b));
+    return ["All", ...preferred, ...extras];
   }, [jobs]);
 
   const visible = useMemo(() => {

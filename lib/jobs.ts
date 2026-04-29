@@ -18,16 +18,18 @@ export interface Job {
   id: string;
   title: string;
   industry: string;
-  category: JobCategory;
+  category: string;
   location: string;
   experience: string;
-  /** Optional company description; not rendered today. */
-  companyDescription?: string;
-  /** Optional employment type (e.g. "Full-time", "Hybrid"). */
+  /** Optional employment type (e.g. "Full-time", "Part-time", "Contract"). */
   type?: string;
+  /** Optional work arrangement (e.g. "On-site", "Hybrid", "Remote"). */
+  workType?: string;
 }
 
-const VALID_CATEGORIES: ReadonlyArray<JobCategory> = [
+// Preferred ordering hint for filter chips. Notion is the source of truth for
+// the actual set of categories — anything outside this list still renders.
+export const VALID_CATEGORIES: ReadonlyArray<JobCategory> = [
   "Manufacturing",
   "FMCG",
   "Healthcare",
@@ -37,10 +39,6 @@ const VALID_CATEGORIES: ReadonlyArray<JobCategory> = [
   "Finance",
   "Other",
 ];
-
-function isValidCategory(value: string): value is JobCategory {
-  return (VALID_CATEGORIES as ReadonlyArray<string>).includes(value);
-}
 
 function plainText(items: RichTextItemResponse[] | undefined): string {
   if (!items || items.length === 0) return "";
@@ -75,7 +73,7 @@ function rowToJob(page: PageObjectResponse): Job | null {
   const experience = readRichText(page, "Experience");
   const categoryName = readSelect(page, "Category");
   const type = readSelect(page, "Employment Type");
-  const companyDescription = readRichText(page, "Company Description");
+  const workType = readSelect(page, "Work Type");
 
   if (!title || !industry || !location || !experience) {
     console.warn(
@@ -83,9 +81,9 @@ function rowToJob(page: PageObjectResponse): Job | null {
     );
     return null;
   }
-  if (!categoryName || !isValidCategory(categoryName)) {
+  if (!categoryName) {
     console.warn(
-      `[getJobs] Skipping row ${page.id} — invalid or missing category "${categoryName ?? ""}"`,
+      `[getJobs] Skipping row ${page.id} — missing category`,
     );
     return null;
   }
@@ -99,7 +97,7 @@ function rowToJob(page: PageObjectResponse): Job | null {
     experience,
   };
   if (type) job.type = type;
-  if (companyDescription) job.companyDescription = companyDescription;
+  if (workType) job.workType = workType;
   return job;
 }
 
