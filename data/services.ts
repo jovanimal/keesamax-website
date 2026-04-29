@@ -20,8 +20,8 @@ export const services: Service[] = [
     title: "Executive Headhunting",
     description:
       "Our targeted approach identifies and attracts top-tier talent who may not be actively seeking new roles, giving you access to the best from specifically targeted companies.",
-    image: "/images/service-lounge-meeting.jpg",
-    alt: "Discreet executive meeting over coffee in an upscale Kuala Lumpur hotel lounge",
+    image: "/images/service-lounge-meeting-v2.jpg",
+    alt: "Discreet cross-cultural executive meeting over coffee in an upscale Kuala Lumpur hotel lounge",
   },
   {
     number: "03",

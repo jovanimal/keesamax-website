@@ -87,8 +87,8 @@ export function Hero({ jobs }: HeroProps) {
             />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[var(--radius-xl)] shadow-[var(--shadow-xl)]">
               <Image
-                src="/images/hero-team.jpg"
-                alt="Diverse Malaysian business professionals collaborating in a modern Kuala Lumpur office"
+                src="/images/hero-team-v2.jpg"
+                alt="Diverse business professionals collaborating in a modern Kuala Lumpur office"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
