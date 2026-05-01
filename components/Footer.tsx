@@ -41,7 +41,7 @@ export function Footer() {
             </Link>
             <p className="mb-5 max-w-[320px] text-[0.9375rem] leading-[1.7]">
               A Malaysia-based recruitment firm connecting exceptional
-              talent with leading companies across Southeast Asia since{" "}
+              talent with leading companies across Asia Pacific since{" "}
               {site.founded}.
             </p>
             {/* <div className="flex gap-2.5">

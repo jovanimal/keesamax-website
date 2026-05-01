@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/Button";
 import type { Job } from "@/lib/jobs";
 
 const trustAvatars: string[] = [
-  "/images/avatar-malay-woman.jpg",
   "/images/avatar-chinese-man.jpg",
   "/images/avatar-indian-woman.jpg",
   "/images/avatar-chinese-woman.jpg",
+  "/images/avatar-malay-woman.jpg",
 ];
 
 interface HeroProps {
@@ -41,7 +41,7 @@ export function Hero({ jobs }: HeroProps) {
             </h1>
 
             <p className="mb-9 max-w-[520px] text-[1.125rem] leading-[1.7] text-[var(--color-slate-600)]">
-              Based in Malaysia, we help companies across Southeast Asia find
+              Based in Malaysia, we help companies across Asia Pacific to find
               exceptional talent, from skilled professionals to C-suite
               executives. Relationship-driven. Multilingual. Proven.
             </p>
@@ -96,13 +96,13 @@ export function Hero({ jobs }: HeroProps) {
               />
             </div>
 
-            <FloatCard
+            {/* <FloatCard
               className="top-8 right-0 lg:-right-10"
               icon={<Star className="size-5 text-[var(--color-blue-500)]" />}
               iconBg="bg-[var(--color-blue-50)]"
               label="Success Rate"
               value="92% Placement"
-            />
+            /> */}
             <FloatCard
               className="bottom-10 left-0 lg:-left-8"
               icon={<Briefcase className="size-5 text-[var(--color-emerald-600)]" />}

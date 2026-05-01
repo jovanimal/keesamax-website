@@ -11,24 +11,24 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    icon: <Globe className="size-[22px]" />,
-    title: "Multilingual Communication",
-    body: "Fluent in English, Malay, Mandarin, Cantonese, Hokkien, and German for effective, personalized engagement across cultures.",
-  },
-  {
-    icon: <Building2 className="size-[22px]" />,
-    title: "Cross-Industry Expertise",
-    body: "Consultants with diverse corporate backgrounds and deep market knowledge spanning automotive, tech, FMCG, healthcare, and more.",
-  },
-  {
     icon: <Users className="size-[22px]" />,
     title: "Relationship-First Approach",
     body: "We invest in understanding your team culture and long-term vision, not just filling a seat.",
   },
   {
+    icon: <Building2 className="size-[22px]" />,
+    title: "Cross-Industry Expertise",
+    body: "Consultants with diverse corporate backgrounds and deep market knowledge spanning engineering, technology, FMCG, healthcare, manufacturing, semiconductor and more.",
+  },
+  {
+    icon: <Globe className="size-[22px]" />,
+    title: "Multilingual Communication",
+    body: "Fluent in English, Malay, Mandarin, Cantonese, Hokkien, and German for effective, personalized engagement across cultures.",
+  },
+  {
     icon: <MapPin className="size-[22px]" />,
     title: "Regional Coverage",
-    body: "Talent placed across Malaysia, Singapore, Australia, China, Japan, Korea, Hong Kong, India, Thailand, and Vietnam.",
+    body: "Talent placed across Malaysia, Singapore, Australia, China, Japan, Korea, Hong Kong, India, Thailand, Vietnam and more.",
   },
 ];
 
